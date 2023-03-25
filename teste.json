@@ -1,0 +1,168 @@
+{
+    "tokens": [
+        {
+            "token": "while",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 5,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                0
+            ]
+        },
+        {
+            "token": "i",
+            "identifica\u00e7\u00e3o": [
+                "Identificador",
+                1
+            ],
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                6
+            ]
+        },
+        {
+            "token": "<",
+            "identifica\u00e7\u00e3o": "Operador",
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                8
+            ]
+        },
+        {
+            "token": "100",
+            "identifica\u00e7\u00e3o": [
+                "Constante",
+                2
+            ],
+            "tamanho": 3,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                10
+            ]
+        },
+        {
+            "token": "do",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 2,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                14
+            ]
+        },
+        {
+            "token": "i",
+            "identifica\u00e7\u00e3o": [
+                "Identificador",
+                1
+            ],
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                17
+            ]
+        },
+        {
+            "token": "=",
+            "identifica\u00e7\u00e3o": "Operador",
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                19
+            ]
+        },
+        {
+            "token": "i",
+            "identifica\u00e7\u00e3o": [
+                "Identificador",
+                1
+            ],
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                21
+            ]
+        },
+        {
+            "token": "+",
+            "identifica\u00e7\u00e3o": "Operador",
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                23
+            ]
+        },
+        {
+            "token": "j",
+            "identifica\u00e7\u00e3o": [
+                "Identificador",
+                3
+            ],
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                25
+            ]
+        },
+        {
+            "token": ";",
+            "identifica\u00e7\u00e3o": "Terminador",
+            "tamanho": 1,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                26
+            ]
+        },
+        {
+            "token": "while",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 5,
+            "posi\u00e7\u00e3o (lin, col)": [
+                0,
+                28
+            ]
+        },
+        {
+            "token": "while",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 5,
+            "posi\u00e7\u00e3o (lin, col)": [
+                1,
+                0
+            ]
+        },
+        {
+            "token": "while",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 5,
+            "posi\u00e7\u00e3o (lin, col)": [
+                2,
+                0
+            ]
+        },
+        {
+            "token": "while",
+            "identifica\u00e7\u00e3o": "Palavra reservada",
+            "tamanho": 5,
+            "posi\u00e7\u00e3o (lin, col)": [
+                3,
+                0
+            ]
+        }
+    ],
+    "simbolos": [
+        {
+            "\u00edndice": 1,
+            "s\u00edmbolo": "i"
+        },
+        {
+            "\u00edndice": 2,
+            "s\u00edmbolo": "100"
+        },
+        {
+            "\u00edndice": 3,
+            "s\u00edmbolo": "j"
+        }
+    ]
+}
