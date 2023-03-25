@@ -1,5 +1,6 @@
 import re
 import json
+from typing import Optional
 
 
 class AnalisadorLexico:
@@ -38,12 +39,19 @@ class AnalisadorLexico:
 
         return tokens
 
+    def encontrar_caracteristica_token(self, token: str) -> Optional[dict]:
+        for caracteristica in self.caracteristicas:
+            if any(('keys' in caracteristica and token in caracteristica['keys'],
+                    'pattern' in caracteristica and re.match(caracteristica['pattern'], token))):
+                return caracteristica
+        return None
+
     def analisar_linha(self, linha: list, posicao_linha: int) -> None:
         posicao = [posicao_linha, 0]
         tokens = re.split('([/ ])', linha)
         terminadores = self.terminadores
         cont = 0
-        print(tokens)
+
         while cont < len(tokens):
             token = tokens[cont]
 
@@ -57,11 +65,12 @@ class AnalisadorLexico:
                     token, terminadores) + tokens[cont+1:]
                 token = tokens[cont]
 
-            for caracteristica in self.caracteristicas:
-                if any(('keys' in caracteristica and token in caracteristica['keys'],
-                        'pattern' in caracteristica and re.match(caracteristica['pattern'], token))):
-                    self.adiciona_token_info(token, caracteristica, posicao)
-                    break
+            caracteristica = self.encontrar_caracteristica_token(token)
+            if caracteristica:
+                self.adiciona_token_info(token, caracteristica, posicao)
+            else:
+                raise ValueError(
+                    f'Erro léxico: Token "{token}" não reconhecido na linha {posicao_linha+1} e coluna {posicao[1]+1}.')
 
             posicao[1] += len(token)
             cont += 1
@@ -75,7 +84,6 @@ class AnalisadorLexico:
             self.analisar(f.read().splitlines())
 
     def salvar_tokens_in_json(self, filename: str) -> None:
-        
         tokens = []
         for token, tipo, tamanho, posicao in self.tokens_info:
 
@@ -98,12 +106,11 @@ if __name__ == '__main__':
     analisador = AnalisadorLexico()
     analisador.analisar_from_file('teste.txt')
     analisador.salvar_tokens_in_json('teste.json')
-    
-    analise = json.load(open('teste.json','r'))
+
+    analise = json.load(open('teste.json', 'r'))
     tokens = analise['tokens']
     simbolos = analise['simbolos']
-    
+
     import pandas as pd
     print(pd.DataFrame(tokens))
     print(pd.DataFrame(simbolos))
-    
