@@ -17,7 +17,7 @@ class AnalisadorLexico:
     def __init__(self):
         self.tokens_info = []
         self.simbolos = []
-        self.simbolos_tipo = ['Identificador', 'Constante']
+        self.simbolos_tipo = ['Identificador', 'Constante', 'Palavra reservada']
 
     def verifica_e_adiciona_simbolo(self, simbolo: str, tipo: str) -> None:
         if tipo in self.simbolos_tipo and simbolo not in self.simbolos:
